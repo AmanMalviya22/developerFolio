@@ -138,7 +138,7 @@ const workExperiences = {
     {
       role: "Full Stack Developer | Feb 2024",
       company: "Enthu.ai",
-      companylogo: require("./assets/images/enthu.ai"),
+      companylogo: require("./assets/images/enthu.png"),
       date: "",
 
       descBullets: [
