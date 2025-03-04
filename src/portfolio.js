@@ -23,12 +23,12 @@ const greeting = {
   username: "Aman Malviya",
   title: "Hi all, I'm Aman",
   subTitle: emoji(
-    "Software Engineer with 1 year of experience in DevOps and Full-Stack Development, specializing in
-Node, Java, Docker, and Kubernetes. Proficient in DevOps practices including AWS and CI/CD pipelines,
-with a strong foundation in Data Structures and Algorithms (DSA) and a 4-star CodeChef rating."),
+    "Software Engineer with 1 year of experience in DevOps and Full-Stack Development, specializing in Node, Java, Docker, and Kubernetes. Proficient in DevOps practices including AWS and CI/CD pipelines, with a strong foundation in Data Structures and Algorithms (DSA) and a 4-star CodeChef rating."
+  ),
   resumeLink: "https://drive.google.com/file/d/1FYKw9DI3Wiw2rRk1O9ZXI2qledMP4CTi/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
+
 
 // Social Media Links
 
