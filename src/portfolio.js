@@ -155,39 +155,38 @@ const workExperiences = {
       ],
     },
 
-    {
-      role: "Full Stack Developer | Mar 2024 – Sept 2024",
-      company: "BeeperMD",
-      companylogo: require("./assets/images/beepermd.png"),
-      date: "",
-      desc: (
-        <ul>
-          <li>Enhanced application performance, leading to a 30% decrease in latency.</li>
-          <li>Boosted API performance through database indexing and caching techniques.</li>
-          <li>Collaborated on design, testing (JUnit), debugging, and code review processes.</li>
-          <li>Utilized AWS and automation tools like Jenkins to streamline CI/CD pipelines.</li>
-          <li> Tech Stack: Node.js, Java, Spring Boot, React, MySQL, AngularJS, Jenkins, AWS.</li>
-        </ul>
-      )
-    },
+  {
+  role: "Full Stack Developer | Mar 2024 – Sept 2024",
+  company: "BeeperMD",
+  companylogo: require("./assets/images/beepermd.png"),
+  date: "",
+  desc: (
+    <ul>
+      <li>Enhanced app performance, reducing latency by 30%.</li>
+      <li>Improved API performance with database indexing and caching.</li>
+      <li>Worked on design, testing (JUnit), debugging, and code review.</li>
+      <li>Used AWS and Jenkins to streamline CI/CD pipelines.</li>
+      <li>Tech Stack: Node.js, Java, Spring Boot, React, MySQL, AngularJS, Jenkins, AWS.</li>
+    </ul>
+  )
+},
 {
-      role: "DevOps Enginner | Oct 2024 – Feb 2025",
-      company: "VivaOps",
-      companylogo: require("./assets/images/vivaops.avif"),
-      date: "",
-      desc: (
-        <ul>
-        <li> • Successfully deployed a 3-tier microservice on an EKS cluster using Docker and Kubernetes.
-• Designed and implemented robust CI/CD pipelines using Jenkins, enabling seamless automated builds, testing, and
-deployments.</li>
-<li>• Leveraged AWS services (VPN, EC2, S3, RDS) to provision, scale, and monitor infrastructure, improving system
-reliability and reducing downtime by 5%.</li>
-<li>• Automated infrastructure provisioning and management using Terraform and Ansible, reducing manual intervention
-and deployment time by 10%.</li>
-<li>• Tech Stack: AWS, GitLab, Linux, Docker, Kubernetes, Jenkins, Jira Git, GitHub</li>
-        </ul>
-      )
-    },
+  role: "DevOps Engineer | Oct 2024 – Feb 2025",
+  company: "VivaOps",
+  companylogo: require("./assets/images/vivaops.avif"),
+  date: "",
+  desc: (
+    <ul>
+      <li>Deployed a 3-tier microservice on an EKS cluster with Docker and Kubernetes.</li>
+      <li>Created CI/CD pipelines using Jenkins for automated builds, testing, and deployments.</li>
+      <li>Used AWS (VPN, EC2, S3, RDS) to improve system reliability and reduce downtime by 5%.</li>
+      <li>Automated infrastructure with Terraform and Ansible, cutting deployment time by 10%.</li>
+      <li>Tech Stack: AWS, GitLab, Linux, Docker, Kubernetes, Jenkins, Jira, Git, GitHub.</li>
+    </ul>
+  )
+}
+   
+
 
   ]
 };
