@@ -173,7 +173,7 @@ const workExperiences = {
 {
       role: "DevOps Enginner | Oct 2024 – Feb 2025",
       company: "VivaOps",
-      companylogo: require("./assets/images/beepermd.png"),
+      companylogo: require("./assets/images/vivaops.avif"),
       date: "",
       desc: (
         <ul>
