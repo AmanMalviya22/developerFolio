@@ -127,7 +127,7 @@ const techStack = {
     {
       Stack: "DevOps Practices using AWS",
       progressPercentage: "80%"
-    }
+    },
      {
       Stack: "Docker & Kubernetes",
       progressPercentage: "80%"
