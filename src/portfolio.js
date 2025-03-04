@@ -23,8 +23,10 @@ const greeting = {
   username: "Aman Malviya",
   title: "Hi all, I'm Aman",
   subTitle: emoji(
-    "I am a software engineer with 6 months of internship experience in the full-stack domain, proficient in Node.js, MongoDB, Express.js, React.js, HTML, CSS, MySQL, and DevOps practices (certified in AWS). In addition to my technical skills, I am a competitive programmer with a 4-star rating on CodeChef."),
-  resumeLink: "https://docs.google.com/document/d/1J0SdsayXw91vO9CX7gPYrT9uYfEJ2-EGKFYG07itp1Y/edit?usp=sharing", // Set to empty to hide the button
+    "Software Engineer with 1 year of experience in DevOps and Full-Stack Development, specializing in
+Node, Java, Docker, and Kubernetes. Proficient in DevOps practices including AWS and CI/CD pipelines,
+with a strong foundation in Data Structures and Algorithms (DSA) and a 4-star CodeChef rating."),
+  resumeLink: "https://drive.google.com/file/d/1FYKw9DI3Wiw2rRk1O9ZXI2qledMP4CTi/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -126,6 +128,10 @@ const techStack = {
       Stack: "DevOps Practices using AWS",
       progressPercentage: "80%"
     }
+     {
+      Stack: "Docker & Kubernetes",
+      progressPercentage: "80%"
+    }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
@@ -150,7 +156,7 @@ const workExperiences = {
     },
 
     {
-      role: "Full Stack Developer | Mar 2024 – July 2024",
+      role: "Full Stack Developer | Mar 2024 – Sept 2024",
       company: "BeeperMD",
       companylogo: require("./assets/images/beepermd.png"),
       date: "",
@@ -164,7 +170,24 @@ const workExperiences = {
         </ul>
       )
     },
-
+{
+      role: "DevOps Enginner | Oct 2024 – Feb 2025",
+      company: "VivaOps",
+      companylogo: require("./assets/images/beepermd.png"),
+      date: "",
+      desc: (
+        <ul>
+        <li> • Successfully deployed a 3-tier microservice on an EKS cluster using Docker and Kubernetes.
+• Designed and implemented robust CI/CD pipelines using Jenkins, enabling seamless automated builds, testing, and
+deployments.</li>
+<li>• Leveraged AWS services (VPN, EC2, S3, RDS) to provision, scale, and monitor infrastructure, improving system
+reliability and reducing downtime by 5%.</li>
+<li>• Automated infrastructure provisioning and management using Terraform and Ansible, reducing manual intervention
+and deployment time by 10%.</li>
+<li>• Tech Stack: AWS, GitLab, Linux, Docker, Kubernetes, Jenkins, Jira Git, GitHub</li>
+        </ul>
+      )
+    },
 
   ]
 };
