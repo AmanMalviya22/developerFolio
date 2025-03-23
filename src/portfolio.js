@@ -156,7 +156,7 @@ const workExperiences = {
     },
 
   {
-  role: "Full Stack Developer | Mar 2024 – Sept 2024",
+  role: "Full Stack Developer | Mar 2024 – Feb 2025",
   company: "BeeperMD",
   companylogo: require("./assets/images/beepermd.png"),
   date: "",
@@ -169,22 +169,23 @@ const workExperiences = {
       <li>Tech Stack: Node.js, Java, Spring Boot, React, MySQL, AngularJS, Jenkins, AWS.</li>
     </ul>
   )
-},
-{
-  role: "DevOps Engineer | Oct 2024 – Feb 2025",
-  company: "VivaOps",
-  companylogo: require("./assets/images/vivaops.avif"),
-  date: "",
-  desc: (
-    <ul>
-      <li>Deployed a 3-tier microservice on an EKS cluster with Docker and Kubernetes.</li>
-      <li>Created CI/CD pipelines using Jenkins for automated builds, testing, and deployments.</li>
-      <li>Used AWS (VPN, EC2, S3, RDS) to improve system reliability and reduce downtime by 5%.</li>
-      <li>Automated infrastructure with Terraform and Ansible, cutting deployment time by 10%.</li>
-      <li>Tech Stack: AWS, GitLab, Linux, Docker, Kubernetes, Jenkins, Jira, Git, GitHub.</li>
-    </ul>
-  )
-}
+ }
+// ,
+// {
+//   role: "DevOps Engineer | Oct 2024 – Feb 2025",
+//   company: "VivaOps",
+//   companylogo: require("./assets/images/vivaops.avif"),
+//   date: "",
+//   desc: (
+//     <ul>
+//       <li>Deployed a 3-tier microservice on an EKS cluster with Docker and Kubernetes.</li>
+//       <li>Created CI/CD pipelines using Jenkins for automated builds, testing, and deployments.</li>
+//       <li>Used AWS (VPN, EC2, S3, RDS) to improve system reliability and reduce downtime by 5%.</li>
+//       <li>Automated infrastructure with Terraform and Ansible, cutting deployment time by 10%.</li>
+//       <li>Tech Stack: AWS, GitLab, Linux, Docker, Kubernetes, Jenkins, Jira, Git, GitHub.</li>
+//     </ul>
+//   )
+// }
    
 
 
