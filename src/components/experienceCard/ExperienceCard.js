@@ -1,82 +1,85 @@
-import React, {useState, createRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
-export default function ExperienceCard({cardInfo, isDark}) {
-  const [colorArrays, setColorArrays] = useState([]);
-  const imgRef = createRef();
+export default function ExperienceCard({ cardInfo, isDark }) {
+  const [bgColor, setBgColor] = useState("rgb(45, 52, 54)");
+  const imgRef = useRef();
 
-  function getColorArrays() {
+  useEffect(() => {
     const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
-  }
+    const img = imgRef.current;
 
-  function rgb(values) {
-    return typeof values === "undefined"
-      ? null
-      : "rgb(" + values.join(", ") + ")";
-  }
+    const handleImageLoad = () => {
+      try {
+        if (img.complete) {
+          const color = colorThief.getColor(img);
+          setBgColor(`rgb(${color.join(", ")})`);
+        }
+      } catch (err) {
+        console.warn("ColorThief error:", err);
+      }
+    };
 
-  const GetDescBullets = ({descBullets, isDark}) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
-          <li
-            key={i}
-            className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-          >
-            {item}
-          </li>
-        ))
-      : null;
-  };
+    if (img) {
+      if (img.complete) {
+        handleImageLoad();
+      } else {
+        img.addEventListener("load", handleImageLoad);
+        return () => img.removeEventListener("load", handleImageLoad);
+      }
+    }
+  }, []);
+
+  const GetDescBullets = ({ descBullets }) =>
+    descBullets?.map((item, i) => (
+      <li key={i} className={`subTitle ${isDark ? "dark-mode-text" : ""}`}>
+        {item}
+      </li>
+    ));
 
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
-      <div style={{background: rgb(colorArrays)}} className="experience-banner">
-        <div className="experience-blurred_div"></div>
+      <div className="experience-banner" style={{ backgroundColor: bgColor }}>
+        <div className="experience-blurred_div" />
         <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+          <h5 className="experience-text-company" title={cardInfo.company}>
+            {cardInfo.company}
+          </h5>
         </div>
-
         <img
-          crossOrigin={"anonymous"}
+          crossOrigin="anonymous"
           ref={imgRef}
           className="experience-roundedimg"
           src={cardInfo.companylogo}
-          alt={cardInfo.company}
-          onLoad={() => getColorArrays()}
+          alt={`${cardInfo.company} logo`}
         />
       </div>
+
       <div className="experience-text-details">
         <h5
-          className={
-            isDark
-              ? "experience-text-role dark-mode-text"
-              : "experience-text-role"
-          }
+          className={`experience-text-role ${
+            isDark ? "dark-mode-text" : ""
+          }`}
         >
           {cardInfo.role}
         </h5>
         <h5
-          className={
-            isDark
-              ? "experience-text-date dark-mode-text"
-              : "experience-text-date"
-          }
+          className={`experience-text-date ${
+            isDark ? "dark-mode-text" : ""
+          }`}
         >
           {cardInfo.date}
         </h5>
         <p
-          className={
-            isDark
-              ? "subTitle experience-text-desc dark-mode-text"
-              : "subTitle experience-text-desc"
-          }
+          className={`subTitle experience-text-desc ${
+            isDark ? "dark-mode-text" : ""
+          }`}
         >
           {cardInfo.desc}
         </p>
         <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
+          <GetDescBullets descBullets={cardInfo.descBullets} />
         </ul>
       </div>
     </div>
