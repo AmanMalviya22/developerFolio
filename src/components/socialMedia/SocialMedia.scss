@@ -88,3 +88,11 @@
     text-align: center;
   }
 }
+
+.custom-social-icon {
+  width: 1.6em;
+  height: 1.3em;      // Reduce height for better alignment
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0.2em;  // Adjust as needed for perfect centering
+}

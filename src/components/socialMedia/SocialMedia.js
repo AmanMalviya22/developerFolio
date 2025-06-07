@@ -1,13 +1,12 @@
 import React from "react";
 import "./SocialMedia.scss";
 import { socialMediaLinks } from "../../portfolio";
+import codechefLogo from "../../assets/images/codechef-svgrepo-com.svg";
 
 const platforms = [
   { name: "github", icon: "fab fa-github", label: "GitHub" },
   { name: "linkedin", icon: "fab fa-linkedin-in", label: "LinkedIn" },
-  { name: "gmail", icon: "fas fa-envelope", label: "Email", isMail: true },
-  { name: "stackoverflow", icon: "fab fa-stack-overflow", label: "Stack Overflow" },
-  { name: "codechef", icon: "fab fa-codepen", label: "CodeChef" }
+  { name: "codechef", label: "CodeChef", isImage: true, imgSrc: codechefLogo }
 ];
 
 export default function SocialMedia() {
@@ -15,19 +14,23 @@ export default function SocialMedia() {
 
   return (
     <div className="social-media-div">
-      {platforms.map(({ name, icon, label, isMail }) => {
+      {platforms.map(({ name, icon, label, isImage, imgSrc }) => {
         const link = socialMediaLinks[name];
         if (!link) return null;
         return (
           <a
             key={name}
-            href={isMail ? `mailto:${link}` : link}
+            href={link}
             className={`icon-button ${name}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
           >
-            <i className={icon}></i>
+            {isImage ? (
+              <img src={imgSrc} alt={label} className="custom-social-icon" />
+            ) : (
+              <i className={icon}></i>
+            )}
             <span></span>
           </a>
         );
