@@ -31,12 +31,16 @@ export default function ExperienceCard({ cardInfo, isDark }) {
     }
   }, []);
 
-  const GetDescBullets = ({ descBullets }) =>
-    descBullets?.map((item, i) => (
-      <li key={i} className={`subTitle ${isDark ? "dark-mode-text" : ""}`}>
-        {item}
-      </li>
-    ));
+  const GetDescBullets = ({ descBullets }) => {
+  if (!descBullets || !descBullets.length) return null;
+
+  return descBullets.map((item, i) => (
+    <li key={i} className={`subTitle ${isDark ? "dark-mode-text" : ""}`}>
+      {item}
+    </li>
+  ));
+};
+
 
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>

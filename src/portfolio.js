@@ -5,6 +5,9 @@
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
+import blacklightLogo from './assets/images/blacklightgaming.png';
+import vivaopsLogo from './assets/images/vivaopslogo.avif';
+import beepermdLogo from './assets/images/beepermd.png';
 // Splash Screen
 
 const splashScreen = {
@@ -23,9 +26,9 @@ const greeting = {
   username: "Aman Malviya",
   title: "Hi all, I'm Aman",
   subTitle: emoji(
-    "Software Engineer with 1 year of experience in DevOps and Full-Stack Development, specializing in Node, Java, Docker, and Kubernetes. Proficient in DevOps practices including AWS and CI/CD pipelines, with a strong foundation in Data Structures and Algorithms (DSA) and a 4-star CodeChef rating."
+    "Java Developer with expertise in Spring Boot, Hibernate, REST APIs, and Microservices. Strong background in AWS, Docker, Kubernetes, and CI/CD automation. Proficient in performance optimization, database tuning, and low-latency system design. Passionate about building scalable, high-performance applications."
   ),
-  resumeLink: "https://drive.google.com/file/d/1Tvl_QDBJoKSBLEC_J_JlioHjdqrOMLt1/view?usp=sharing", // Set to empty to hide the button
+  resumeLink: "https://drive.google.com/file/d/1NfONHZDweZGvuQjCzDi1cQUoYWfSD27F/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -35,7 +38,7 @@ const greeting = {
 const socialMediaLinks = {
   github: "https://github.com/AmanMalviya22",
   linkedin: "https://www.linkedin.com/in/aman-malviya-839392201/",
-  gmail: "aman_malviya22@outlook.com",
+  gmail: "amanaman26802@gmail.com",
 
   codechef: "https://www.codechef.com/users/aman26802",
 
@@ -48,18 +51,26 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "What I Do",
+  subTitle: "Full-Stack Developer | Passionate about Building Scalable, High-Performance Applications",
+
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop robust and responsive Frontend UIs for web and mobile using React.js and Angular."
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji("⚡ Integration of third party services such as Firebase/ AWS")
+    emoji(
+      "⚡ Build and maintain scalable backend services and RESTful APIs using Java Spring Boot and Node.js."
+    ),
+    emoji(
+      "⚡ Design and deploy cloud-native applications leveraging AWS, Docker, and Kubernetes."
+    ),
+    emoji(
+      "⚡ Implement progressive web apps (PWAs) and single-page applications (SPAs) focused on performance and usability."
+    ),
+    emoji(
+      "⚡ Integrate third-party services such as Firebase, AWS SDK, and payment gateways for seamless functionality."
+    ),
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     { skillName: "Java", fontAwesomeClassname: "fab fa-java" },
@@ -67,23 +78,22 @@ https://fontawesome.com/icons?d=gallery */
     { skillName: "Node.js", fontAwesomeClassname: "fab fa-node" },
     { skillName: "Express.js", fontAwesomeClassname: "fas fa-server" },
     { skillName: "React.js", fontAwesomeClassname: "fab fa-react" },
-    { skillName: "MongoDB", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "MySQL", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
     { skillName: "Angular", fontAwesomeClassname: "fab fa-angular" },
-    { skillName: "OOPS", fontAwesomeClassname: "fas fa-cube" },
-    { skillName: "REST API", fontAwesomeClassname: "fas fa-plug" },
-    { skillName: "AWS", fontAwesomeClassname: "fab fa-aws" },
+    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
+    { skillName: "MySQL", fontAwesomeClassname: "fas fa-database" },
+    { skillName: "MongoDB", fontAwesomeClassname: "fas fa-database" },
     { skillName: "Redis", fontAwesomeClassname: "fas fa-memory" },
-    { skillName: "Microservices", fontAwesomeClassname: "fas fa-network-wired" },
+    { skillName: "Microservices Architecture", fontAwesomeClassname: "fas fa-network-wired" },
+    { skillName: "REST API Design", fontAwesomeClassname: "fas fa-plug" },
+    { skillName: "AWS Cloud Services", fontAwesomeClassname: "fab fa-aws" },
     { skillName: "Docker", fontAwesomeClassname: "fab fa-docker" },
     { skillName: "Kubernetes", fontAwesomeClassname: "fas fa-cubes" },
-    { skillName: "DSA", fontAwesomeClassname: "fas fa-code" },
-    { skillName: "Git", fontAwesomeClassname: "fab fa-git" },
-    { skillName: "GitHub", fontAwesomeClassname: "fab fa-github" }
+    { skillName: "Data Structures & Algorithms", fontAwesomeClassname: "fas fa-code" },
+    { skillName: "Git & GitHub", fontAwesomeClassname: "fab fa-git" },
+    { skillName: "Object-Oriented Programming (OOP)", fontAwesomeClassname: "fas fa-cube" },
   ],
 
-  display: true // Set false to hide this section, defaults to true
+  display: true,
 };
 
 // Education Section
@@ -92,105 +102,116 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Shri Mata Vaishno Devi University",
-      logo: require("./assets/images/SMVD_University_Logo.png"),
-      subHeader: "Bachelor in  Computer Science",
-      duration: "December 2020 - May 2024",
-
+      schoolName: "Indian Institute of Technology (IIT) Roorkee",
+      logo: require("./assets/images/iit_roorkee_logo.png"), // Replace with actual logo image path
+      subHeader: "B.Tech in Computer Science",
+      duration: "2020 - 2024",
       descBullets: [
-        "I am a highly motivated computer science student with a passion for software development. I have strong programming skills in  Java, and C++, and I am proficient in a variety of web development technologies, including HTML, CSS, and JavaScript,Nodejs, MongoDB. I have also gained experience with machine learning and artificial intelligence through coursework and personal projects",
-
-        " I am currently pursuing a B.Tech in Computer Science at Shri Mata Vaishno Devi University and I am expected to graduate in [Year]. After graduation, I am interested in a career in software development, where I can use my skills to create innovative and impactful products."
+        "Completed B.Tech in Computer Science with a strong foundation in algorithms, data structures, and software engineering principles.",
+        "Gained hands-on experience with Java, Spring Boot, Microservices, and cloud technologies through coursework and projects.",
+        "Developed problem-solving skills via competitive programming and academic projects focused on scalable and efficient software design.",
+        "Actively involved in technical clubs and workshops related to software development, DevOps, and system design."
       ]
     },
-
   ]
 };
+
 
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: true, // Show Proficiency Section
   experience: [
     {
-      Stack: "Back-end Development in Java & Nodejs", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Frontend Development in ReactJs",
-      progressPercentage: "80%"
-    },
-    {
-      Stack: "Competitive Programming in Java",
+      Stack: "Java (Core & Advanced), Multithreading, Collections, Streams",
       progressPercentage: "90%"
     },
     {
-      Stack: "DevOps Practices using AWS",
+      Stack: "Spring Boot, Spring Security, Spring Data JPA",
+      progressPercentage: "90%"
+    },
+    {
+      Stack: "Microservices Architecture & RESTful APIs",
+      progressPercentage: "90%"
+    },
+    {
+      Stack: "AWS (EC2, S3, RDS, EKS), Terraform, Ansible",
       progressPercentage: "80%"
     },
-     {
-      Stack: "Docker & Kubernetes",
+    {
+      Stack: "Docker, Kubernetes, CI/CD (Jenkins, GitHub Actions)",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "Databases (MySQL, MongoDB, Redis), Query Optimization",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "Kafka, RabbitMQ, Event-driven Architecture",
       progressPercentage: "80%"
+    },
+    {
+      Stack: "JUnit, Mockito, TestNG, TDD",
+      progressPercentage: "80%"
+    },
+    {
+      Stack: "System Design, Design Patterns (GoF), SOLID Principles",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "Monitoring & Logging (ELK, Prometheus, Grafana, Actuator)",
+      progressPercentage: "75%"
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false
 };
+
 
 // Work experience section
 
-const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+
+ const workExperiences = {
+  display: true,
   experience: [
     {
-      role: "Full Stack Developer | Feb 2024",
-      company: "Enthu.ai",
-      companylogo: require("./assets/images/enthu.png"),
-      date: "",
-
+      role: "Java Backend Developer",
+      company: "Blacklight Gaming",
+      companylogo: blacklightLogo,
+      date: "Apr 2025 – Present",
       descBullets: [
-        "Completed tasks in software architecture, refactoring, and test-driven development.",
-        "Built a REST API with Node.js handling 1000 requests/sec across 100 endpoints.",
-        "Achieved 95% unit test coverage for robust code reliability.",
-        "Adopted Agile methodology for modular and reusable code."
-      ],
+        "Built scalable microservices with Spring Boot for Ludo Superstar (100M+ downloads).",
+        "Integrated PhonePe payment via Java SDK for seamless in-game transactions.",
+        "Containerized services using Docker and deployed to AWS EKS via Kubernetes.",
+        "Set up CI/CD with Jenkins, improving release speed and reliability."
+      ]
     },
-
-  {
-  role: "Java Developer | Mar 2024 – Sep 2024",
-  company: "BeeperMD",
-  companylogo: require("./assets/images/beepermd.png"),
-  date: "",
-  desc: (
-    <ul>
-      <li>Enhanced app performance, reducing latency by 30%.</li>
-      <li>Improved API performance with database indexing and caching.</li>
-      <li>Worked on design, testing (JUnit), debugging, and code review.</li>
-      <li>Used AWS and Jenkins to streamline CI/CD pipelines.</li>
-      <li>Tech Stack: Node.js, Java, Spring Boot, React, MySQL, AngularJS, Jenkins, AWS.</li>
-    </ul>
-  )
- }
-,
-{
-  role: "DevOps Engineer | Oct 2024 – Feb 2025",
-  company: "VivaOps",
-  companylogo: require("./assets/images/vivaops.avif"),
-  date: "",
-  desc: (
-    <ul>
-      <li>Deployed a 3-tier microservice on an EKS cluster with Docker and Kubernetes.</li>
-      <li>Created CI/CD pipelines using Jenkins for automated builds, testing, and deployments.</li>
-      <li>Used AWS (VPN, EC2, S3, RDS) to improve system reliability and reduce downtime by 5%.</li>
-      <li>Automated infrastructure with Terraform and Ansible, cutting deployment time by 10%.</li>
-      <li>Tech Stack: AWS, GitLab, Linux, Docker, Kubernetes, Jenkins, Jira, Git, GitHub.</li>
-    </ul>
-  )
-}
-   
-
-
+    {
+      role: "Software Engineer",
+      company: "VivaOps",
+      companylogo: vivaopsLogo,
+      date: "Oct 2024 – Feb 2025",
+      descBullets: [
+        "Developed microservices in Java and Spring Boot for SaaS operations platform.",
+        "Automated deployments using Jenkins and Terraform, reducing manual effort by 40%.",
+        "Provisioned AWS infrastructure (EC2, S3, RDS) for production and staging.",
+        "Enhanced security using Ansible for consistent VPN and access control setup."
+      ]
+    },
+    {
+      role: "Java Developer",
+      company: "BeeperMD",
+      companylogo: beepermdLogo,
+      date: "Mar 2024 – Sep 2024",
+      descBullets: [
+        "Improved API performance by 5% using query optimization and caching.",
+        "Developed REST APIs with Spring Boot, integrated with MySQL and RabbitMQ.",
+        "Streamlined CI/CD pipeline with Jenkins and AWS, reducing downtime.",
+        "Contributed to patient dashboard frontend using React and Redux."
+      ]
+    }
   ]
 };
+
 
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
@@ -209,125 +230,118 @@ const bigProjects = {
   projects: [
     {
       image: require("./assets/images/ecommerce.png"),
-      projectName: "E-commerce Application",
-      projectDesc: <ul>
-        Developed, tested and deployed an E-commerce web application using Nodejs, MongoDB, Express, React.
-        ● Implemented all the features of an E–commerce application along with stripe payment gateway.
-        ● Tech Stack: Nodejs, MongoDB, Express, React.
-      </ul>,
-
+      projectName: "E-commerce Web Application",
+      projectDesc:
+        "Built a fully functional e-commerce platform with user authentication, product listings, cart system, and real-time Stripe payment integration using the MERN stack (MongoDB, Express, React, Node.js).",
       footerLink: [
         {
-          name: "Active Link",
-          url: "https://ecommerce-sanity-stripe.vercel.app/",
-
+          name: "Live Demo",
+          url: "https://ecommerce-sanity-stripe.vercel.app/"
         },
         {
-
           name: "GitHub",
           url: "https://github.com/AmanMalviya22/ecommerce_web_application"
         }
-        //  you can add extra buttons here.
       ]
     },
-
     {
       image: require("./assets/images/sudoku.png"),
-      projectName: "Sudoku Game",
-      projectDesc: <ul>● Designed a sudoku solver web application using React, JavaScript.
-        ● Implement features like Easy, Medium, Hard level, reset, hint features.
-        ● Tech Stack: React, JavaScript, HTML, CSS</ul>, footerLink: [
-          {
-            name: "Active Link",
-            url: "https://x-e-n-o-r.github.io/Vue-Sudoku/"
-          },
-          {
-            name: "GitHub",
-            url: "https://github.com/AmanMalviya22/sudoku"
-          }
-        ]
-    },
-
-  ],
+      projectName: "Sudoku Puzzle Game",
+      projectDesc:
+        "Designed and developed a responsive Sudoku puzzle game with difficulty levels, hint generation, and state reset functionality using React and JavaScript.",
+      footerLink: [
+        {
+          name: "Live Demo",
+          url: "https://x-e-n-o-r.github.io/Vue-Sudoku/"
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/AmanMalviya22/sudoku"
+        }
+      ]
+    }
+  ]
 };
+
 
 // Achievement Section
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements & Certifications 🏆"),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Recognitions, certifications, and milestones that reflect my skills, growth, and passion for technology.",
 
   achievementsCards: [
     {
-      title: "4 star rated on CodeChef",
+      title: "4⭐ CodeChef – Global Rank 2 (Nov 2022)",
       subtitle:
-        "Achieved a commendable 4-star rating.Secured Global rank 2 in CodeChef November Long Challenge 2022.",
+        "Secured Global Rank 2 in CodeChef November Long Challenge 2022 and consistently performed in rated contests.",
       image: require("./assets/images/codechef logo.webp"),
-      imageAlt: "Google Code-In Logo",
+      imageAlt: "CodeChef Logo",
       footerLink: [
         {
-          name: "profile",
+          name: "View Profile",
           url: "https://www.codechef.com/users/aman26802"
         }
       ]
     },
     {
-      title: "AWS Certifications",
+      title: "AWS Academy Graduate – Cloud Foundations",
       subtitle:
-        "AWS Academy Graduate Certification with hands on Experience",
+        "Completed AWS Cloud Foundations with hands-on labs covering compute, storage, databases, and networking on AWS.",
       image: require("./assets/images/aws logo.jpg"),
-      imageAlt: "Google Assistant Action Logo",
+      imageAlt: "AWS Logo",
       footerLink: [
         {
-          name: "Certificate",
+          name: "View Certificate",
           url: "https://drive.google.com/file/d/1z82IX1s0ounE5zxRADXkeahKNIMaeCtP/view?usp=drive_link"
         }
       ]
     },
-
     {
-      title: "Data Structures and Algorithm in Java",
-      subtitle: "Completed Certifcation from Coding ninja in Data Structures and Algorithm",
+      title: "Data Structures & Algorithms in Java – Coding Ninjas",
+      subtitle:
+        "Mastered core DSA concepts such as recursion, dynamic programming, trees, and graphs with over 300+ problems solved.",
       image: require("./assets/images/coding ninja logo.jpg"),
-      imageAlt: "PWA Logo",
+      imageAlt: "Coding Ninjas Logo",
       footerLink: [
-
         {
-          name: "Certificate",
+          name: "View Certificate",
           url: "https://drive.google.com/file/d/1oELvJvlexu-gCSCKgjjSWmcj78itGiBM/view?usp=drive_link"
         }
       ]
     },
     {
-      title: "Full Stack Development In Nodejs",
-      subtitle: "Completed Certifcation from Coding ninja in Full Stack Web Development",
+      title: "Full Stack Web Development – Node.js (Coding Ninjas)",
+      subtitle:
+        "Built full-stack applications using HTML, CSS, JavaScript, Node.js, Express, MongoDB, and deployed on cloud platforms.",
       image: require("./assets/images/coding ninja logo.jpg"),
-      imageAlt: "PWA Logo",
+      imageAlt: "Coding Ninjas Logo",
       footerLink: [
-
         {
-          name: "Certificate",
+          name: "View Certificate",
           url: "https://drive.google.com/file/d/1fveQn0QLG-_KFcnlsLz0UiGDYVArg4uZ/view?usp=drive_link"
         }
       ]
-    }, {
-      title: "java Certifications",
-      subtitle: "Completed Certifcation from Coding ninja in java",
+    },
+    {
+      title: "Java Programming Certification – Coding Ninjas",
+      subtitle:
+        "Completed an in-depth Java course covering object-oriented programming, collections framework, and multithreading.",
       image: require("./assets/images/coding ninja logo.jpg"),
-      imageAlt: "PWA Logo",
+      imageAlt: "Coding Ninjas Logo",
       footerLink: [
-
         {
-          name: "Certificate",
+          name: "View Certificate",
           url: "https://drive.google.com/file/d/1D105VzLzFGyuZKGLt3QiSzjHYkgpn_lt/view?usp=drive_link"
         }
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
+
 
 // Blogs Section
 
@@ -390,7 +404,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+91-9149736306",
-  email_address: "aman_malviya22@outlook.com"
+  email_address: "amanaman26802@gmail.com"
 };
 
 // Twitter Section
