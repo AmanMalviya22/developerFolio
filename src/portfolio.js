@@ -39,15 +39,10 @@ const socialMediaLinks = {
   github: "https://github.com/AmanMalviya22",
   linkedin: "https://www.linkedin.com/in/aman-malviya-839392201/",
   gmail: "amanaman26802@gmail.com",
-
   codechef: "https://www.codechef.com/users/aman26802",
-
   stackoverflow: "https://stackoverflow.com/users/14799948/aman-malviya",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
+  display: true
 };
-
 // Skills Section
 
 const skillsSection = {
@@ -148,10 +143,6 @@ const techStack = {
     },
     {
       Stack: "Kafka, RabbitMQ, Event-driven Architecture",
-      progressPercentage: "80%"
-    },
-    {
-      Stack: "JUnit, Mockito, TestNG, TDD",
       progressPercentage: "80%"
     },
     {

@@ -21,28 +21,30 @@
   background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.certificate-detail-div {
-  text-align: center;
+  border-radius: 18px; // increased for softer look
+  border: 1.5px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  overflow: hidden;
 }
 .certificate-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: $lightBoxShadowDark 0px 24px 40px -10px;
+  border-color: $buttonColor;
+  transform: translateY(-6px) scale(1.025);
 }
 .dark-mode.certificate-card:hover {
-  box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
+  box-shadow: $achievementCertificateCardHoverDark 0px 24px 40px -10px;
+  border-color: $buttonHover;
 }
 .certificate-image-div {
   position: relative;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 14px;
+  margin-bottom: 1rem;
 }
 .achievement-cards-div {
   display: grid;
@@ -54,24 +56,33 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.5rem;
+  border-top: 1px solid $lightBorder1;
+  padding-top: 1rem;
+  margin-top: 1rem;
 }
 .certificate-card-footer span.certificate-tag {
   background: $buttonColor;
   color: $lightBackground3;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 4px;
+  border-radius: 20px;
   display: inline-flex;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   height: 2em;
+  align-items: center;
   justify-content: center;
   white-space: nowrap;
   line-height: 1.5;
   margin: 0 0.5rem 0.5rem 0;
-  padding: 0 0.75em;
+  padding: 0 1.1em;
   cursor: pointer;
-  transition: 0.2s ease-in;
+  transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 span.certificate-tag:hover {
   background: $buttonHover;
+  color: #fff;
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
 }

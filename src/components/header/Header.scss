@@ -25,6 +25,10 @@
   max-width: 100%;
   padding: 15px 20px;
   margin: 0px auto;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  background: rgba(255, 255, 255, 0.85);
+  transition: background 0.3s;
 }
 
 .header ul {
@@ -179,4 +183,16 @@
   .header {
     font-size: 12px;
   }
+}
+
+.menu li a:hover,
+.menu li a:focus {
+  color: $buttonColor;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.dark-menu.header {
+  background: rgba(23, 28, 40, 0.92);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
 }

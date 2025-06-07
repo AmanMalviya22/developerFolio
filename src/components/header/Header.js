@@ -7,26 +7,32 @@ import {
   greeting,
   workExperiences,
   skillsSection,
- 
   bigProjects,
-
   achievementSection
 } from "../../portfolio";
 
 function Header() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   const viewExperience = workExperiences.display;
-  
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
-  
-  const viewProject=bigProjects.display;
-  
+  const viewProject = bigProjects.display;
+
+  // Smooth scroll handler
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      // Close mobile menu if open
+      document.getElementById("menu-btn").checked = false;
+    }
+  };
 
   return (
     <Headroom>
-      <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
+      <header className={isDark ? "dark-menu header" : "header"} aria-label="Main header">
+        <a href="/" className="logo" aria-label="Homepage">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -35,48 +41,48 @@ function Header() {
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{color: "white"}}
+          style={{ color: "white" }}
+          tabIndex={0}
+          aria-label="Toggle navigation menu"
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-          )}
-          {viewExperience && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-         
-          {
-            viewProject && (
+        <nav aria-label="Main navigation">
+          <ul className={isDark ? "dark-menu menu" : "menu"}>
+            {viewSkills && (
               <li>
-                <a href="#projects">Projects</a>
+                <a href="#skills" onClick={e => handleNavClick(e, "skills")}>Skills</a>
               </li>
-            )
-          }
-          {viewAchievement && (
+            )}
+            {viewExperience && (
+              <li>
+                <a href="#experience" onClick={e => handleNavClick(e, "experience")}>Work Experiences</a>
+              </li>
+            )}
+            {viewProject && (
+              <li>
+                <a href="#projects" onClick={e => handleNavClick(e, "projects")}>Projects</a>
+              </li>
+            )}
+            {viewAchievement && (
+              <li>
+                <a href="#achievements" onClick={e => handleNavClick(e, "achievements")}>Achievements</a>
+              </li>
+            )}
             <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#contact" onClick={e => handleNavClick(e, "contact")}>Contact Me</a>
             </li>
-          )}
-         
-         
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
-          </li>
-        </ul>
+            <li>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a tabIndex={-1} aria-hidden="true">
+                <ToggleSwitch />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </Headroom>
   );
 }
+
 export default Header;
