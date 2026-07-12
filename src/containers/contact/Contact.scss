@@ -13,16 +13,24 @@
 }
 
 .contact-title {
-  font-size: 65px;
-  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+}
+
+.contact-cta-box {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid $lightBorder1;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(6, 182, 212, 0.08));
 }
 
 .contact-detail,
 .contact-detail-email {
-  margin-top: 20px;
-  font-size: 40px;
-  font-weight: 400;
-  color: $subTitle;
+  margin-top: 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $buttonColor;
   text-decoration: none;
 }
 
@@ -34,7 +42,8 @@
 }
 
 .contact-subtitle {
-  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .contact-text-div {

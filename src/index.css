@@ -12,25 +12,39 @@
     url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
   font-display: swap;
 }
+
+:root {
+  --accent: #2563eb;
+  --accent-cyan: #06b6d4;
+  --bg-light: #f8fafc;
+  --text-primary: #0f172a;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 html,
 body {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 18px / 1.6 Montserrat, "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-light);
 }
-/* Media Query */
+
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--text-primary);
+}
+
 @media (max-width: 1380px) {
-  html,
   body {
-    font-size: rem;
-    line-height: normal;
+    font-size: 17px;
   }
 }

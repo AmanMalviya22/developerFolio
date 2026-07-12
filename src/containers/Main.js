@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
+import Highlights from "./highlights/Highlights";
 import Skills from "./skills/Skills";
 import StackProgress from "./skillProgress/skillProgress";
 import WorkExperience from "./workExperience/WorkExperience";
@@ -10,6 +11,8 @@ import Achievement from "./achievement/Achievement";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
 import Profile from "./profile/Profile";
+import Contact from "./contact/Contact";
+import Footer from "../components/footer/Footer";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
@@ -39,26 +42,27 @@ const Main = () => {
   };
 
   return (
-    <div className={isDark ? "dark-mode" : null}>
+    <div className={isDark ? "dark-mode page-shell" : "page-shell"}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         {isShowingSplashAnimation && splashScreen.enabled ? (
           <SplashScreen />
         ) : (
-          <>
+          <div className="page-content">
             <Header />
             <Greeting />
+            <Highlights />
+            <WorkExperience />
             <Skills />
             <StackProgress />
-            <Education />
-            <WorkExperience />
-            <Projects />
             <StartupProject />
+            <Projects />
+            <Education />
             <Achievement />
-           
+            <Contact />
             <Profile />
-           
+            <Footer />
             <ScrollToTopButton />
-          </>
+          </div>
         )}
       </StyleProvider>
     </div>

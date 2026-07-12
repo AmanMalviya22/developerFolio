@@ -1,28 +1,23 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import "./Footer.scss";
-import { Fade } from "react-reveal";
+import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import StyleContext from "../../contexts/StyleContext";
+import {greeting} from "../../portfolio";
 
 export default function Footer() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
   const footerClass = isDark ? "dark-mode footer-text" : "footer-text";
 
   return (
-    <Fade bottom duration={1000} distance="5px">
+    <Fade bottom duration={800} distance="5px">
       <footer className="footer-div">
+        <div className="footer-accent-line" />
         <p className={footerClass}>
-          {emoji("Made with ❤️ by DeveloperFolio Team")}
+          {emoji(`Crafted with ☕ by ${greeting.username}`)}
         </p>
-        <p className={footerClass}>
-          Theme by{" "}
-          <a
-            href="https://github.com/saadpasta/developerFolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            developerFolio
-          </a>
+        <p className={`${footerClass} footer-meta`}>
+          Backend Engineer · Payments · Microservices
         </p>
       </footer>
     </Fade>

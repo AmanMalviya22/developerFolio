@@ -1,273 +1,247 @@
 /* Change this file to get your personal Portfolio */
 
-// To change portfolio colors globally go to the  _globalColor.scss file
-
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation";
 
-import blacklightLogo from './assets/images/blacklightgaming.png';
-import vivaopsLogo from './assets/images/vivaopslogo.avif';
-import beepermdLogo from './assets/images/beepermd.png';
-// Splash Screen
+import niumLogo from "./assets/images/nium-logo.svg";
+import blacklightLogo from "./assets/images/blacklightgaming.png";
+import vivaopsLogo from "./assets/images/vivaopslogo.avif";
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: true,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 1800
 };
 
-// Summary And Greeting Section
-
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true
 };
 
 const greeting = {
   username: "Aman Malviya",
-  title: "Hi all, I'm Aman",
+  title: "Hi, I'm Aman",
+  role: "Backend Engineer · Payments · Microservices",
   subTitle: emoji(
-    "Java Developer with expertise in Spring Boot, Hibernate, REST APIs, and Microservices. Strong background in AWS, Docker, Kubernetes, and CI/CD automation. Proficient in performance optimization, database tuning, and low-latency system design. Passionate about building scalable, high-performance applications."
+    "Backend engineer with ~2 years of experience building payment systems and microservices in Java and Spring Boot. I deploy on AWS, integrate AI tooling (Claude / MCP) into engineering workflows, and hold a 4-star rating on CodeChef."
   ),
-  resumeLink: "https://drive.google.com/file/d/1NfONHZDweZGvuQjCzDi1cQUoYWfSD27F/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+  resumeLink:
+    "https://drive.google.com/file/d/1NfONHZDweZGvuQjCzDi1cQUoYWfSD27F/view?usp=sharing",
+  displayGreeting: true
 };
 
-
-// Social Media Links
+const highlightsSection = {
+  display: true,
+  stats: [
+    {value: "100K+", label: "Daily Transactions"},
+    {value: "50+", label: "Banking Partners"},
+    {value: "99.9%", label: "System Uptime"},
+    {value: "4⭐", label: "CodeChef Rating"}
+  ]
+};
 
 const socialMediaLinks = {
   github: "https://github.com/AmanMalviya22",
   linkedin: "https://www.linkedin.com/in/aman-malviya-839392201/",
   gmail: "amanaman26802@gmail.com",
   codechef: "https://www.codechef.com/users/aman26802",
-  stackoverflow: "https://stackoverflow.com/users/14799948/aman-malviya",
   display: true
 };
-// Skills Section
 
 const skillsSection = {
   title: "What I Do",
-  subTitle: "Full-Stack Developer | Passionate about Building Scalable, High-Performance Applications",
+  subTitle:
+    "Building reliable payment infrastructure and cloud-native backend systems",
 
   skills: [
     emoji(
-      "⚡ Develop robust and responsive Frontend UIs for web and mobile using React.js and Angular."
+      "⚡ Build real-time payment systems processing 100K+ daily transactions across 50+ banking partners."
     ),
     emoji(
-      "⚡ Build and maintain scalable backend services and RESTful APIs using Java Spring Boot and Node.js."
+      "⚡ Design microservices with Java, Spring Boot, Redis caching, and event-driven architectures."
     ),
     emoji(
-      "⚡ Design and deploy cloud-native applications leveraging AWS, Docker, and Kubernetes."
+      "⚡ Deploy and operate services on AWS EKS with CI/CD, auto-scaling, and production monitoring."
     ),
     emoji(
-      "⚡ Implement progressive web apps (PWAs) and single-page applications (SPAs) focused on performance and usability."
-    ),
-    emoji(
-      "⚡ Integrate third-party services such as Firebase, AWS SDK, and payment gateways for seamless functionality."
-    ),
+      "⚡ Integrate AI tooling — MCP servers with Claude for automated root-cause analysis and engineering automation."
+    )
   ],
 
   softwareSkills: [
-    { skillName: "Java", fontAwesomeClassname: "fab fa-java" },
-    { skillName: "Spring Boot", fontAwesomeClassname: "fas fa-cloud" },
-    { skillName: "Node.js", fontAwesomeClassname: "fab fa-node" },
-    { skillName: "Express.js", fontAwesomeClassname: "fas fa-server" },
-    { skillName: "React.js", fontAwesomeClassname: "fab fa-react" },
-    { skillName: "Angular", fontAwesomeClassname: "fab fa-angular" },
-    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
-    { skillName: "MySQL", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "MongoDB", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "Redis", fontAwesomeClassname: "fas fa-memory" },
-    { skillName: "Microservices Architecture", fontAwesomeClassname: "fas fa-network-wired" },
-    { skillName: "REST API Design", fontAwesomeClassname: "fas fa-plug" },
-    { skillName: "AWS Cloud Services", fontAwesomeClassname: "fab fa-aws" },
-    { skillName: "Docker", fontAwesomeClassname: "fab fa-docker" },
-    { skillName: "Kubernetes", fontAwesomeClassname: "fas fa-cubes" },
-    { skillName: "Data Structures & Algorithms", fontAwesomeClassname: "fas fa-code" },
-    { skillName: "Git & GitHub", fontAwesomeClassname: "fab fa-git" },
-    { skillName: "Object-Oriented Programming (OOP)", fontAwesomeClassname: "fas fa-cube" },
+    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
+    {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
+    {skillName: "Microservices", fontAwesomeClassname: "fas fa-network-wired"},
+    {skillName: "PostgreSQL", fontAwesomeClassname: "fas fa-database"},
+    {skillName: "MySQL", fontAwesomeClassname: "fas fa-database"},
+    {skillName: "MongoDB", fontAwesomeClassname: "fas fa-database"},
+    {skillName: "Redis", fontAwesomeClassname: "fas fa-memory"},
+    {skillName: "AWS", fontAwesomeClassname: "fab fa-aws"},
+    {skillName: "Docker", fontAwesomeClassname: "fab fa-docker"},
+    {skillName: "Kubernetes", fontAwesomeClassname: "fas fa-cubes"},
+    {skillName: "Jenkins", fontAwesomeClassname: "fas fa-cogs"},
+    {skillName: "Terraform", fontAwesomeClassname: "fas fa-cloud"},
+    {skillName: "MCP / Claude", fontAwesomeClassname: "fas fa-robot"},
+    {skillName: "REST APIs", fontAwesomeClassname: "fas fa-plug"},
+    {skillName: "System Design", fontAwesomeClassname: "fas fa-sitemap"},
+    {skillName: "Git", fontAwesomeClassname: "fab fa-git-alt"}
   ],
 
-  display: true,
+  display: true
 };
 
-// Education Section
-
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     {
-      schoolName: "Indian Institute of Technology (IIT) Roorkee",
-      logo: require("./assets/images/iit_roorkee_logo.png"), // Replace with actual logo image path
-      subHeader: "B.Tech in Computer Science",
+      schoolName: "Shri Mata Vaishno Devi University",
+      logo: require("./assets/images/SMVD_University_Logo.png"),
+      subHeader: "B.Tech in Computer Science · CGPA 8.5/10",
       duration: "2020 - 2024",
       descBullets: [
-        "Completed B.Tech in Computer Science with a strong foundation in algorithms, data structures, and software engineering principles.",
-        "Gained hands-on experience with Java, Spring Boot, Microservices, and cloud technologies through coursework and projects.",
-        "Developed problem-solving skills via competitive programming and academic projects focused on scalable and efficient software design.",
-        "Actively involved in technical clubs and workshops related to software development, DevOps, and system design."
+        "Built a strong foundation in algorithms, data structures, and software engineering.",
+        "Developed backend and systems projects using Java, Spring Boot, and cloud technologies.",
+        "Competitive programming background with rated contests on CodeChef.",
+        "Graduated with CGPA 8.5/10."
       ]
-    },
+    }
   ]
 };
 
-
-// Your top 3 proficient stacks/tech experience
-
 const techStack = {
-  viewSkillBars: true, // Show Proficiency Section
+  viewSkillBars: true,
   experience: [
     {
-      Stack: "Java (Core & Advanced), Multithreading, Collections, Streams",
+      Stack: "Java, Multithreading, Concurrency, OOP",
+      progressPercentage: "92%"
+    },
+    {
+      Stack: "Spring Boot, Spring Data JPA, Hibernate, Spring Cloud",
       progressPercentage: "90%"
     },
     {
-      Stack: "Spring Boot, Spring Security, Spring Data JPA",
+      Stack: "Payment Systems & Microservices Architecture",
       progressPercentage: "90%"
     },
     {
-      Stack: "Microservices Architecture & RESTful APIs",
-      progressPercentage: "90%"
+      Stack: "MySQL, PostgreSQL, MongoDB, Redis",
+      progressPercentage: "85%"
     },
     {
-      Stack: "AWS (EC2, S3, RDS, EKS), Terraform, Ansible",
+      Stack: "AWS (EKS, EC2, RDS, S3, VPC), CloudWatch",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "Docker, Kubernetes, Jenkins, CI/CD",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "Terraform, Ansible, Infrastructure Automation",
       progressPercentage: "80%"
     },
     {
-      Stack: "Docker, Kubernetes, CI/CD (Jenkins, GitHub Actions)",
-      progressPercentage: "85%"
-    },
-    {
-      Stack: "Databases (MySQL, MongoDB, Redis), Query Optimization",
-      progressPercentage: "85%"
-    },
-    {
-      Stack: "Kafka, RabbitMQ, Event-driven Architecture",
+      Stack: "Claude API, MCP, AI-assisted Engineering",
       progressPercentage: "80%"
     },
     {
-      Stack: "System Design, Design Patterns (GoF), SOLID Principles",
+      Stack: "System Design, Event-Driven Architecture, REST APIs",
       progressPercentage: "85%"
-    },
-    {
-      Stack: "Monitoring & Logging (ELK, Prometheus, Grafana, Actuator)",
-      progressPercentage: "75%"
     }
   ],
   displayCodersrank: false
 };
 
-
-// Work experience section
-
-
- const workExperiences = {
+const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Java Backend Developer",
-      company: "Blacklight Gaming",
-      companylogo: blacklightLogo,
-      date: "Apr 2025 – Present",
+      role: "Backend Engineer",
+      company: "NIUM",
+      companylogo: niumLogo,
+      date: "Aug 2025 – Present · Mumbai",
       descBullets: [
-        "Built scalable microservices with Spring Boot for Ludo Superstar (100M+ downloads).",
-        "Integrated PhonePe payment via Java SDK for seamless in-game transactions.",
-        "Containerized services using Docker and deployed to AWS EKS via Kubernetes.",
-        "Set up CI/CD with Jenkins, improving release speed and reliability."
+        "Built real-time payment systems processing 100K+ daily transactions across 50+ banking partners with 99.9%+ uptime.",
+        "Improved payment success rates by 15% and reduced manual intervention by 40% through automated validation logic.",
+        "Architected an MCP server powered by Claude to automate root-cause analysis of transaction failures, cutting investigation time by 60%.",
+        "Migrated reference data (SWIFT, IFSC, bank codes) into a centralized graph-based system, improving partner onboarding.",
+        "Added Redis caching to high-traffic lookups and deployed microservices on AWS EKS with CI/CD and monitoring."
       ]
     },
     {
       role: "Software Engineer",
-      company: "VivaOps",
-      companylogo: vivaopsLogo,
-      date: "Oct 2024 – Feb 2025",
+      company: "Blacklight Studio",
+      companylogo: blacklightLogo,
+      date: "Apr 2025 – Aug 2025 · Noida",
       descBullets: [
-        "Developed microservices in Java and Spring Boot for SaaS operations platform.",
-        "Automated deployments using Jenkins and Terraform, reducing manual effort by 40%.",
-        "Provisioned AWS infrastructure (EC2, S3, RDS) for production and staging.",
-        "Enhanced security using Ansible for consistent VPN and access control setup."
+        "Developed backend services in Java and Spring Boot, improving platform scalability and modularity.",
+        "Designed RESTful APIs with caching strategies, reducing average response time from 200ms to 50ms.",
+        "Optimized database queries and connection pooling to handle concurrent load with low latency.",
+        "Collaborated with cross-functional teams to deliver production features and maintain service reliability."
       ]
     },
     {
-      role: "Java Developer",
-      company: "BeeperMD",
-      companylogo: beepermdLogo,
-      date: "Mar 2024 – Sep 2024",
+      role: "Associate DevOps Engineer",
+      company: "Inorg (VivaOps)",
+      companylogo: vivaopsLogo,
+      date: "Oct 2024 – Feb 2025 · Pune",
       descBullets: [
-        "Improved API performance by 5% using query optimization and caching.",
-        "Developed REST APIs with Spring Boot, integrated with MySQL and RabbitMQ.",
-        "Streamlined CI/CD pipeline with Jenkins and AWS, reducing downtime.",
-        "Contributed to patient dashboard frontend using React and Redux."
+        "Built and deployed microservices in Java and Spring Boot supporting multiple internal applications.",
+        "Implemented CI/CD pipelines with Jenkins, reducing manual deployment effort by 70%.",
+        "Managed AWS infrastructure (EC2, S3, RDS, VPC) with auto-scaling and provisioned resources via Terraform and Ansible.",
+        "Reduced deployment time from 45 minutes to 5 minutes through containerization with Docker and Kubernetes."
       ]
     }
   ]
 };
 
-
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: "true",
+  display: true
 };
-
-// Some big projects you have worked on
 
 const bigProjects = {
   display: true,
-  title: "Projects",
+  title: "Featured Projects",
+  subtitle:
+    "Open-source and personal projects showcasing backend systems, AI integration, and algorithms",
 
   projects: [
     {
-      image: require("./assets/images/ecommerce.png"),
-      projectName: "E-commerce Web Application",
+      image: require("./assets/images/developerActivity.svg"),
+      projectName: "Intelligent Transaction Analyzer (MCP Server)",
       projectDesc:
-        "Built a fully functional e-commerce platform with user authentication, product listings, cart system, and real-time Stripe payment integration using the MERN stack (MongoDB, Express, React, Node.js).",
+        "Open-source MCP server with Claude integration that analyzes transaction failures by querying logs and producing root-cause diagnostics automatically — the pattern behind diagnostic tooling built at NIUM.",
       footerLink: [
         {
-          name: "Live Demo",
-          url: "https://ecommerce-sanity-stripe.vercel.app/"
-        },
-        {
           name: "GitHub",
-          url: "https://github.com/AmanMalviya22/ecommerce_web_application"
+          url: "https://github.com/AmanMalviya22"
         }
       ]
     },
     {
-      image: require("./assets/images/sudoku.png"),
-      projectName: "Sudoku Puzzle Game",
+      image: require("./assets/images/skill.svg"),
+      projectName: "Word Lookup Dictionary",
       projectDesc:
-        "Designed and developed a responsive Sudoku puzzle game with difficulty levels, hint generation, and state reset functionality using React and JavaScript.",
+        "Trie-based dictionary with O(m) lookup time, auto-suggestion, and spell correction using Levenshtein distance fuzzy matching.",
       footerLink: [
         {
-          name: "Live Demo",
-          url: "https://x-e-n-o-r.github.io/Vue-Sudoku/"
-        },
-        {
           name: "GitHub",
-          url: "https://github.com/AmanMalviya22/sudoku"
+          url: "https://github.com/AmanMalviya22/word-lookup-master"
         }
       ]
     }
   ]
 };
 
-
-// Achievement Section
-// Include certificates, talks etc
-
 const achievementSection = {
-  title: emoji("Achievements & Certifications 🏆"),
+  title: emoji("Achievements 🏆"),
   subtitle:
-    "Recognitions, certifications, and milestones that reflect my skills, growth, and passion for technology.",
+    "Competitive programming milestones and technical recognitions",
 
   achievementsCards: [
     {
-      title: "4⭐ CodeChef – Global Rank 2 (Nov 2022)",
+      title: "4⭐ CodeChef (1654 Rating)",
       subtitle:
-        "Secured Global Rank 2 in CodeChef November Long Challenge 2022 and consistently performed in rated contests.",
+        "Achieved 4-star rating on CodeChef through consistent rated contest participation.",
       image: require("./assets/images/codechef logo.webp"),
       imageAlt: "CodeChef Logo",
       footerLink: [
@@ -278,9 +252,22 @@ const achievementSection = {
       ]
     },
     {
+      title: "Global Rank 2 — CodeChef Nov Long 2022",
+      subtitle:
+        "Secured Global Rank 2 in the November Long Challenge 2022 (Division 3, Rated).",
+      image: require("./assets/images/codechef logo.webp"),
+      imageAlt: "CodeChef Contest",
+      footerLink: [
+        {
+          name: "View Profile",
+          url: "https://www.codechef.com/users/aman26802"
+        }
+      ]
+    },
+    {
       title: "AWS Academy Graduate – Cloud Foundations",
       subtitle:
-        "Completed AWS Cloud Foundations with hands-on labs covering compute, storage, databases, and networking on AWS.",
+        "Hands-on labs covering compute, storage, databases, and networking on AWS.",
       image: require("./assets/images/aws logo.jpg"),
       imageAlt: "AWS Logo",
       footerLink: [
@@ -289,127 +276,52 @@ const achievementSection = {
           url: "https://drive.google.com/file/d/1z82IX1s0ounE5zxRADXkeahKNIMaeCtP/view?usp=drive_link"
         }
       ]
-    },
-    {
-      title: "Data Structures & Algorithms in Java – Coding Ninjas",
-      subtitle:
-        "Mastered core DSA concepts such as recursion, dynamic programming, trees, and graphs with over 300+ problems solved.",
-      image: require("./assets/images/coding ninja logo.jpg"),
-      imageAlt: "Coding Ninjas Logo",
-      footerLink: [
-        {
-          name: "View Certificate",
-          url: "https://drive.google.com/file/d/1oELvJvlexu-gCSCKgjjSWmcj78itGiBM/view?usp=drive_link"
-        }
-      ]
-    },
-    {
-      title: "Full Stack Web Development – Node.js (Coding Ninjas)",
-      subtitle:
-        "Built full-stack applications using HTML, CSS, JavaScript, Node.js, Express, MongoDB, and deployed on cloud platforms.",
-      image: require("./assets/images/coding ninja logo.jpg"),
-      imageAlt: "Coding Ninjas Logo",
-      footerLink: [
-        {
-          name: "View Certificate",
-          url: "https://drive.google.com/file/d/1fveQn0QLG-_KFcnlsLz0UiGDYVArg4uZ/view?usp=drive_link"
-        }
-      ]
-    },
-    {
-      title: "Java Programming Certification – Coding Ninjas",
-      subtitle:
-        "Completed an in-depth Java course covering object-oriented programming, collections framework, and multithreading.",
-      image: require("./assets/images/coding ninja logo.jpg"),
-      imageAlt: "Coding Ninjas Logo",
-      footerLink: [
-        {
-          name: "View Certificate",
-          url: "https://drive.google.com/file/d/1D105VzLzFGyuZKGLt3QiSzjHYkgpn_lt/view?usp=drive_link"
-        }
-      ]
     }
   ],
   display: true
 };
 
-
-// Blogs Section
-
 const blogSection = {
   title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "",
+  displayMediumBlogs: "false",
+  blogs: [],
+  display: false
 };
-
-// Talks Sections
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "",
+  talks: [],
+  display: false
 };
-
-// Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: true // Set false to hide this section, defaults to true
+  subtitle: "",
+  podcast: [],
+  display: false
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Let's Connect ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
+    "Based in Mumbai. Open to backend engineering roles, collaborations, and interesting technical conversations.",
   number: "+91-9149736306",
   email_address: "amanaman26802@gmail.com"
 };
 
-// Twitter Section
-
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  userName: "twitter",
+  display: false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false;
 
 export {
   illustration,
   greeting,
+  highlightsSection,
   socialMediaLinks,
   splashScreen,
   skillsSection,

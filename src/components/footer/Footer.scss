@@ -3,13 +3,27 @@
 .footer-text {
   text-align: center;
   color: $subTitle !important;
+  margin: 0.35rem 0;
 }
 
-.dark-mode {
-  color: $textColorDark !important;
+.footer-meta {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.dark-mode.footer-text {
+  color: #94a3b8 !important;
 }
 
 .footer-div {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+  margin-top: 3rem;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.footer-accent-line {
+  width: 80px;
+  height: 4px;
+  margin: 0 auto 1.25rem;
+  border-radius: 4px;
+  background: linear-gradient(90deg, $buttonColor, $accentCyan);
 }

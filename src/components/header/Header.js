@@ -49,14 +49,14 @@ function Header() {
         </label>
         <nav aria-label="Main navigation">
           <ul className={isDark ? "dark-menu menu" : "menu"}>
+            {viewExperience && (
+              <li>
+                <a href="#experience" onClick={e => handleNavClick(e, "experience")}>Experience</a>
+              </li>
+            )}
             {viewSkills && (
               <li>
                 <a href="#skills" onClick={e => handleNavClick(e, "skills")}>Skills</a>
-              </li>
-            )}
-            {viewExperience && (
-              <li>
-                <a href="#experience" onClick={e => handleNavClick(e, "experience")}>Work Experiences</a>
               </li>
             )}
             {viewProject && (
@@ -70,7 +70,7 @@ function Header() {
               </li>
             )}
             <li>
-              <a href="#contact" onClick={e => handleNavClick(e, "contact")}>Contact Me</a>
+              <a href="#contact" onClick={e => handleNavClick(e, "contact")}>Contact</a>
             </li>
             <li>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
