@@ -35,7 +35,7 @@ const highlightsSection = {
     {value: "100K+", label: "Daily Transactions"},
     {value: "50+", label: "Banking Partners"},
     {value: "99.9%", label: "System Uptime"},
-    {value: "4⭐", label: "CodeChef Rating"}
+    {value: "4-star", label: "CodeChef Rating"}
   ]
 };
 
@@ -80,22 +80,9 @@ const skillsSection = {
     }
   ],
 
-  skills: [
-    "Payment systems at scale with automated validation and reconciliation.",
-    "Microservices on AWS EKS with CI/CD, caching, and observability.",
-    "MCP-powered diagnostics for faster root-cause analysis in production."
-  ],
+  skills: [],
 
-  softwareSkills: [
-    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
-    {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
-    {skillName: "AWS", fontAwesomeClassname: "fab fa-aws"},
-    {skillName: "Docker", fontAwesomeClassname: "fab fa-docker"},
-    {skillName: "Kubernetes", fontAwesomeClassname: "fas fa-cubes"},
-    {skillName: "PostgreSQL", fontAwesomeClassname: "fas fa-database"},
-    {skillName: "Redis", fontAwesomeClassname: "fas fa-memory"},
-    {skillName: "Kafka", fontAwesomeClassname: "fas fa-stream"}
-  ],
+  softwareSkills: [],
 
   display: true
 };
@@ -177,7 +164,7 @@ const bigProjects = {
 
   projects: [
     {
-      image: require("./assets/images/jsFramework.svg"),
+      image: require("./assets/images/hospital api log.jpg"),
       projectName: "Intelligent Transaction Analyzer (MCP Server)",
       projectDesc:
         "MCP server with Claude integration that queries logs and produces root-cause diagnostics for transaction failures — the pattern behind tooling built at NIUM.",
@@ -190,7 +177,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/programmer.svg"),
+      image: require("./assets/images/sudoku.png"),
       projectName: "Word Lookup Dictionary",
       projectDesc:
         "Trie-based dictionary with O(m) lookup, auto-suggestion, and spell correction using Levenshtein distance fuzzy matching.",
@@ -258,7 +245,7 @@ const achievementSection = {
       subtitle:
         "Hands-on labs covering compute, storage, databases, and networking on AWS.",
       image: require("./assets/images/aws logo.jpg"),
-      imageAlt: "AWS Logo",
+      imageAlt: "AWS Academy",
       footerLink: [
         {
           name: "View Certificate",

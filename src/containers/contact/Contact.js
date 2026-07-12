@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import "./Contact.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, contactInfo, greeting} from "../../portfolio";
+import {contactInfo, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Contact() {
@@ -48,27 +48,14 @@ export default function Contact() {
                 {contactInfo.number}
               </a>
             )}
-            <a
-              className="contact-detail-email"
-              href={`mailto:${contactInfo.email_address}`}
-            >
-              {contactInfo.email_address}
-            </a>
             <SocialMedia />
           </div>
         </div>
         <div className="contact-image-div">
-          {illustration.animated ? (
-            <img
-              alt="Contact"
-              src={require("../../assets/images/contactMailDark.svg")}
-            />
-          ) : (
-            <img
-              alt="Contact"
-              src={require("../../assets/images/contactMailDark.svg")}
-            />
-          )}
+          <img
+            alt=""
+            src={require("../../assets/images/contactMailDark.svg")}
+          />
         </div>
       </div>
     </div>

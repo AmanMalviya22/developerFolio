@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {skillsSection} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -32,8 +31,6 @@ export default function Skills() {
         </p>
       </div>
 
-      <SoftwareSkill />
-
       {skillsSection.skillGroups && (
         <div className="skill-groups">
           {skillsSection.skillGroups.map(group => (
@@ -50,19 +47,6 @@ export default function Skills() {
           ))}
         </div>
       )}
-
-      <div className="skills-highlights">
-        {skillsSection.skills.map((skill, i) => (
-          <p
-            key={i}
-            className={
-              isDark ? "dark-mode subTitle skills-text" : "subTitle skills-text"
-            }
-          >
-            {skill}
-          </p>
-        ))}
-      </div>
     </div>
   );
 }

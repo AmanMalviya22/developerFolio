@@ -54,11 +54,12 @@
   border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
-.card-image {
+.project-image .card-image {
+  width: auto;
   max-width: 100%;
-  height: auto;
-  width: 200px;
-  filter: drop-shadow(0 8px 16px rgba(37, 99, 235, 0.12));
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 .card-title {

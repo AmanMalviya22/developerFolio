@@ -62,8 +62,8 @@
   margin-top: 1rem;
 }
 .certificate-card-footer span.certificate-tag {
-  background: $buttonColor;
-  color: $lightBackground3;
+  background: linear-gradient(135deg, $buttonColor, $accentCyan);
+  color: #fff;
   border-radius: 20px;
   display: inline-flex;
   font-size: 0.85rem;
@@ -75,12 +75,15 @@
   margin: 0 0.5rem 0.5rem 0;
   padding: 0 1.1em;
   cursor: pointer;
-  transition: 0.2s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-decoration: none;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-span.certificate-tag:hover {
+
+span.certificate-tag:hover,
+a.certificate-tag:hover {
   background: $buttonHover;
   color: #fff;
   transform: scale(1.07);
