@@ -1,64 +1,79 @@
 @import "../../_globalColor";
 
-.skills-main-div {
+.skills-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills-highlights {
+  max-width: 720px;
+  margin: 2rem auto 0;
+}
+
+.skills-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+  border-left: 3px solid $buttonColor;
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.skill-group-card {
+  padding: 1.25rem;
+  border-radius: 14px;
+  border: 1px solid $lightBorder1;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.dark-mode .skill-group-card {
+  background: rgba(17, 24, 39, 0.8);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.skill-group-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $buttonColor;
+  margin: 0 0 0.75rem;
+}
+
+.skill-group-tags {
   display: flex;
-  width: 100%;
-  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.skills-text-div {
-  margin-left: 50px;
+.skill-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: $textColor;
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
-.skills-main-div > * {
-  flex: 1;
-  margin-bottom: 30px;
-}
-
-.skills-image-div > img {
-  max-width: 100%;
-  height: auto;
+.dark-mode .skill-tag {
+  color: $textColorDark;
+  background: rgba(96, 165, 250, 0.12);
 }
 
 .skills-heading {
-  font-size: 56px;
-  font-weight: 400;
-}
-.subTitle {
-  color: $subTitle;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
-/* Media Query */
-@media (max-width: 1380px) {
-  .skills-heading {
-    font-size: 40px;
-  }
-}
 @media (max-width: 768px) {
-  .skills-heading {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-  }
-  .skills-main-div {
-    flex-direction: column;
-  }
-  .skills-text-div {
-    margin-left: 0px;
-    margin: 20px;
-  }
-  .skills-text {
-    font-size: 16px;
-  }
-  .skills-text-subtitle {
-    font-size: 16px;
-    text-align: center;
-  }
-  .skills-image-div {
-    /* display: none; */
-    order: 2;
+  .skill-groups {
+    grid-template-columns: 1fr;
   }
 }

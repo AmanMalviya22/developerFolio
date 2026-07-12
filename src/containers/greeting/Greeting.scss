@@ -85,8 +85,23 @@
 }
 
 .greeting-text-p {
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  line-height: 1.65;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  max-width: 36rem;
+}
+
+.hero-lead {
+  font-weight: 600;
+  color: $titleColor !important;
+}
+
+.dark-mode.hero-lead {
+  color: $textColorDark !important;
+}
+
+.greeting-about {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
   max-width: 36rem;
 }
 

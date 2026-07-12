@@ -1,0 +1,69 @@
+@import "../../_globalColor";
+
+.company-strip {
+  width: 90%;
+  margin: 0 auto 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid $lightBorder1;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.dark-mode .company-strip {
+  background: rgba(17, 24, 39, 0.75);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.company-strip-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $subTitle;
+  margin: 0 0 1rem;
+}
+
+.company-strip-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.company-strip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 90px;
+}
+
+.company-strip-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.company-strip-item span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $cardSubtitle;
+  text-align: center;
+}
+
+.dark-mode .company-strip-item span {
+  color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+  .company-strip-logos {
+    gap: 1.25rem;
+  }
+}

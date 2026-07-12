@@ -1,12 +1,9 @@
 import React, {useContext} from "react";
-import {Fade} from "react-reveal";
-import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
+import {illustration, greeting, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
@@ -15,65 +12,73 @@ export default function Greeting() {
     return null;
   }
   return (
-    <Fade bottom duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
-        <div
-          className={
-            isDark ? "greeting-hero greeting-hero-dark" : "greeting-hero"
-          }
-        >
-          <div className="greeting-main">
-            <div className="greeting-text-div">
-              <span className="hero-badge">📍 Mumbai, India · @ NIUM</span>
-              <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
-              </h1>
-              {greeting.role && (
-                <p
-                  className={
-                    isDark ? "dark-mode greeting-role" : "greeting-role"
-                  }
-                >
-                  {greeting.role}
-                </p>
-              )}
+    <div className="greet-main" id="greeting">
+      <div
+        className={isDark ? "greeting-hero greeting-hero-dark" : "greeting-hero"}
+      >
+        <div className="greeting-main">
+          <div className="greeting-text-div">
+            <span className="hero-badge">Mumbai, India · Backend Engineer @ NIUM</span>
+            <h1
+              className={isDark ? "dark-mode greeting-text" : "greeting-text"}
+            >
+              {greeting.title}
+            </h1>
+            {greeting.role && (
               <p
                 className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
+                  isDark ? "dark-mode greeting-role" : "greeting-role"
                 }
               >
-                {greeting.subTitle}
+                {greeting.role}
               </p>
-              <SocialMedia />
-              <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
-                  <Button
-                    text="Download Resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                  />
-                )}
-              </div>
-            </div>
-            <div className="greeting-image-div">
-              {illustration.animated ? (
-                <DisplayLottie animationData={landingPerson} />
-              ) : (
-                <img
-                  alt="man sitting on table"
-                  src={require("../../assets/images/manOnTable.svg")}
+            )}
+            <p
+              className={
+                isDark
+                  ? "dark-mode greeting-text-p hero-lead"
+                  : "greeting-text-p hero-lead subTitle"
+              }
+            >
+              {greeting.subTitle}
+            </p>
+            {greeting.aboutLine && (
+              <p
+                className={
+                  isDark ? "dark-mode greeting-about" : "greeting-about subTitle"
+                }
+              >
+                {greeting.aboutLine}
+              </p>
+            )}
+            <div className="button-greeting-div">
+              {greeting.resumeLink && (
+                <Button
+                  text="Download Resume"
+                  newTab={true}
+                  href={greeting.resumeLink}
                 />
               )}
+              <Button
+                text="LinkedIn"
+                newTab={true}
+                href={socialMediaLinks.linkedin}
+              />
+              <Button text="Contact" href="#contact" />
             </div>
+          </div>
+          <div className="greeting-image-div">
+            {illustration.animated ? (
+              <DisplayLottie animationData={landingPerson} />
+            ) : (
+              <img
+                alt="Developer illustration"
+                src={require("../../assets/images/manOnTable.svg")}
+              />
+            )}
           </div>
         </div>
       </div>
-    </Fade>
+    </div>
   );
 }

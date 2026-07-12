@@ -192,8 +192,23 @@
 .menu li a:hover,
 .menu li a:focus {
   color: $buttonColor;
-  text-decoration: underline;
+  background-color: $headerHoverBG;
+  text-decoration: none;
   transition: color 0.2s;
+}
+
+.menu li a.nav-active {
+  color: $buttonColor;
+  font-weight: 700;
+}
+
+.menu li a.nav-resume {
+  color: $buttonColor;
+  font-weight: 700;
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  border-radius: 8px;
+  padding: 10px 14px !important;
+  margin-left: 4px;
 }
 
 .dark-menu.header {

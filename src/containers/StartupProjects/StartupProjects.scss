@@ -36,6 +36,24 @@
   box-shadow: 0 20px 48px rgba(37, 99, 235, 0.16);
 }
 
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.project-tech-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: $buttonColor;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
 .card-image {
   max-width: 100%;
   height: auto;
@@ -97,6 +115,14 @@
 .project-card-footer span.project-tag:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+#projects {
+  text-align: center;
+}
+
+#projects .section-heading {
+  display: inline-block;
 }
 
 @media (max-width: 768px) {

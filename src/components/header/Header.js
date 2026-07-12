@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -8,31 +8,63 @@ import {
   workExperiences,
   skillsSection,
   bigProjects,
-  achievementSection
+  achievementSection,
+  educationInfo
 } from "../../portfolio";
 
-function Header() {
-  const { isDark } = useContext(StyleContext);
-  const viewExperience = workExperiences.display;
-  const viewSkills = skillsSection.display;
-  const viewAchievement = achievementSection.display;
-  const viewProject = bigProjects.display;
+const navItems = [
+  {id: "experience", label: "Experience", visible: () => workExperiences.display},
+  {id: "projects", label: "Projects", visible: () => bigProjects.display},
+  {id: "achievements", label: "Achievements", visible: () => achievementSection.display},
+  {id: "skills", label: "Skills", visible: () => skillsSection.display},
+  {id: "education", label: "Education", visible: () => educationInfo.display},
+  {id: "contact", label: "Contact", visible: () => true}
+];
 
-  // Smooth scroll handler
+function Header() {
+  const {isDark} = useContext(StyleContext);
+  const [activeSection, setActiveSection] = useState("greeting");
+
+  useEffect(() => {
+    const sections = ["greeting", ...navItems.map(item => item.id)];
+    const observer = new IntersectionObserver(
+      entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      {rootMargin: "-40% 0px -50% 0px", threshold: [0.1, 0.3, 0.6]}
+    );
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        observer.observe(el);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleNavClick = (e, id) => {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      // Close mobile menu if open
+      el.scrollIntoView({behavior: "smooth"});
       document.getElementById("menu-btn").checked = false;
     }
   };
 
   return (
     <Headroom>
-      <header className={isDark ? "dark-menu header" : "header"} aria-label="Main header">
-        <a href="/" className="logo" aria-label="Homepage">
+      <header
+        className={isDark ? "dark-menu header" : "header"}
+        aria-label="Main header"
+      >
+        <a href="#greeting" className="logo" aria-label="Homepage">
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
           <span className="grey-color">/&gt;</span>
@@ -41,37 +73,39 @@ function Header() {
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{ color: "white" }}
           tabIndex={0}
           aria-label="Toggle navigation menu"
         >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
+          <span className={isDark ? "navicon navicon-dark" : "navicon"} />
         </label>
         <nav aria-label="Main navigation">
           <ul className={isDark ? "dark-menu menu" : "menu"}>
-            {viewExperience && (
+            {navItems.map(
+              item =>
+                item.visible() && (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className={activeSection === item.id ? "nav-active" : ""}
+                      onClick={e => handleNavClick(e, item.id)}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                )
+            )}
+            {greeting.resumeLink && (
               <li>
-                <a href="#experience" onClick={e => handleNavClick(e, "experience")}>Experience</a>
+                <a
+                  className="nav-resume"
+                  href={greeting.resumeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
               </li>
             )}
-            {viewSkills && (
-              <li>
-                <a href="#skills" onClick={e => handleNavClick(e, "skills")}>Skills</a>
-              </li>
-            )}
-            {viewProject && (
-              <li>
-                <a href="#projects" onClick={e => handleNavClick(e, "projects")}>Projects</a>
-              </li>
-            )}
-            {viewAchievement && (
-              <li>
-                <a href="#achievements" onClick={e => handleNavClick(e, "achievements")}>Achievements</a>
-              </li>
-            )}
-            <li>
-              <a href="#contact" onClick={e => handleNavClick(e, "contact")}>Contact</a>
-            </li>
             <li>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a tabIndex={-1} aria-hidden="true">
